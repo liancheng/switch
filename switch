@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+ALTERNATIVES_ROOT=$HOME/local/opt
+
+program=$1
+alternative=$2
+
+rm -f $ALTERNATIVES_ROOT/$program
+ln -sf $ALTERNATIVES_ROOT/${program}-$alternative $ALTERNATIVES_ROOT/$program
